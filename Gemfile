@@ -8,7 +8,7 @@ gem 'sqlite3'
 gem 'minitest'
 gem 'tconsole'
 gem 'turn'
-gem 'activerecord'
+gem 'activerecord', '~> 4.0.0'
 gem 'factory_girl'
 gem 'simplecov'
 gem 'coveralls', require: false
