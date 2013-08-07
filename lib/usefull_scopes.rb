@@ -10,7 +10,7 @@ module UsefullScopes
       values = collection.map do |id_or_object|
         find_object_value_or_value(id_or_object)
       end
-      return scoped unless values.any?
+      return all unless values.any?
       where(arel_table[:id].not_in(values))
     }
 
@@ -35,7 +35,7 @@ module UsefullScopes
         query_params << arel_table[attr_name].not_in(attr_value)
       end
 
-      return scoped if query_params.blank?
+      return all if query_params.blank?
 
       where arel_table.create_and query_params
     }
