@@ -19,8 +19,7 @@ module UsefullScopes
 
     def test_random_sql
       random_request = Model.random
-
-      assert_equal "SELECT \"models\".* FROM \"models\"  ORDER BY RANDOM()", random_request.to_sql
+      assert_equal "SELECT \"models\".* FROM \"models\"   ORDER BY RANDOM()", random_request.to_sql
     end
 
     def test_exclude_result
